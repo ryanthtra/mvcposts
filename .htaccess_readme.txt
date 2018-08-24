@@ -1,0 +1,6 @@
+// Basically removes the need to type "public" in the URL, so the BASE_URL is now just "phpmvc/".
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule ^$ public/ [L]
+  RewriteRule (.*) public/$1 [L]
+</IfModule>

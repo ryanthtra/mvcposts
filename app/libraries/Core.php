@@ -2,7 +2,7 @@
 /*
 *   App Core class
 *   Creates URL and loads core controller
-*   URL format - /controller/method/params
+*   URL format - /controller/controller_method/params
 */
 class Core {
   protected $currentController = 'Pages';

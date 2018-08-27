@@ -18,6 +18,17 @@ class User {
     return ($this->db->rowCount() > 0);
   }
 
+  // Find user by email
+  public function getUserById($id) {
+    $this->db->query('SELECT * FROM users WHERE id = :the_id');
+    $this->db->bind(':the_id', $id);
+    
+    $row = $this->db->single();
+
+    // Check if row exists
+    return $row;
+  }
+
   // Register new user
   public function register($data) {
     $this->db->query('INSERT INTO users (name, email, password) VALUES(:the_name, :the_email, :the_password)');

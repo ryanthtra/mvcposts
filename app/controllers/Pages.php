@@ -9,7 +9,7 @@ class Pages extends Controller {
   public function index() {
     // If logged in, go to posts index page instead
     if (isLoggedIn()) {
-      redirect('/posts');
+      redirect('posts');
     }
     $data = [
       'title' => 'MVC Posts',
